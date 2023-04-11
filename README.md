@@ -32,7 +32,13 @@ with open("/path/to/your/urls.txt", "r") as file:
 # Folder to save the screenshots
 output_folder = "/path/to/your/output_folder"
 ```
-
+4. Default is headless mode. Other custom settings can be configured here:
+```
+# Configure Chrome options
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--window-size=1920,1080")
+```
 ## Troubleshooting
 ### ChromeDriver Issues
 If you encounter issues related to ChromeDriver, make sure you have downloaded the correct version for your installed Chrome browser. You can check your Chrome version by navigating to the menu (three vertical dots) in the top-right corner of the browser, then click Help > About Google Chrome.
