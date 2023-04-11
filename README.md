@@ -14,20 +14,24 @@ pip install selenium
 ```
 git clone https://github.com/brandsecure/chrome-screenshots
 ```
-2. Change into project directory
-3. Install required Python packages
-```
-pip install requirements.txt
-```
-4. Download the appropriate ChromeDriver executable for your system from the [ChromeDriver Downloads page](https://sites.google.com/chromium.org/driver/downloads?authuser=0). Choose the version that matches your installed Chrome browser version.
-5. Unzip the downloaded file and move the chromedriver executable to a suitable location on your system.
+2. Download the appropriate ChromeDriver executable for your system from the [ChromeDriver Downloads page](https://sites.google.com/chromium.org/driver/downloads?authuser=0). Choose the version that matches your installed Chrome browser version.
+3. Unzip the downloaded file and move the chromedriver executable to a suitable location on your system.
 
 ## Configuration
 1. Update the chrome_driver_path variable in the screenshots.py script with the path to your ChromeDriver executable:
 ```
 chrome_driver_path = "/path/to/chromedriver"
 ```
-2. Create/modify a text file named urls.txt in the project directory and add the list of URLs to be captured, one per line.
+2. Update the with open line with the path to the urls.txt (one URL per line)
+```
+# Read URLs from the text file
+with open("/path/to/your/urls.txt", "r") as file:
+```
+3. Update the output_folder to desired location
+```
+# Folder to save the screenshots
+output_folder = "/path/to/your/output_folder"
+```
 
 ## Troubleshooting
 ### ChromeDriver Issues
